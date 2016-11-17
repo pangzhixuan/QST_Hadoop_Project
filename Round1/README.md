@@ -103,7 +103,7 @@
 
     统计需求：
       1：完成每天的UV统计
-         在map部分，正则匹配每条记录，把ip和页面路径取出来，key值可以用1和2，value用ip和文件路径。在reduce里面去重放在hashset里面，得出size
+         在map部分，正则匹配每条记录，把ip提出来，key值可以用1就是IntWritable的one，value做ip。在reduce里面去重放在hashset里面，得出size
       2：完成每天访问量Top10的Show统计
          在map部分，正则匹配出ip和路径/show/...，路径做key，ip做value，reduce里对ip进行计数，输出时ip数量为key，路径做value存到文件中。从文件中取前十条记录。
       3:完成每天的次日留存统计
